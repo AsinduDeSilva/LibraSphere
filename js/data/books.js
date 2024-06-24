@@ -35,7 +35,7 @@ let BOOKS = {
         description : "Most organizations with a web presence build and operate APIs; the doorway for customers to interact with the company's services. Designing, building, and managing these critical programs affect everyone in the organization, from engineers and product owners to C-suite executives. But the real challenge for developers and solution architects is creating an API platform from the ground up.",
         cover : 'url(assets/images/books/b4.jpg)',
         available : false,
-        borrowed_by : 'thanuj@librasphere.com',
+        borrowed_by : 'thanuj@gmail.com',
         overdue_fine: 10,
         eBook : false
     },
@@ -45,7 +45,7 @@ let BOOKS = {
         description : "Master the math needed to excel in data science, machine learning, and statistics. In this book author Thomas Nield guides you through areas like calculus, probability, linear algebra, and statistics and how they apply to techniques like linear regression, logistic regression, and neural networks. Along the way you'll also gain practical insights into the state of data science and how to use those insights to maximize your career.",
         cover : 'url(assets/images/books/b5.jpg)',
         available : false,
-        borrowed_by : 'thanilka@librasphere.com',
+        borrowed_by : 'thanilka@gmail.com',
         overdue_fine: 10,
         eBook : false
     },
@@ -55,7 +55,7 @@ let BOOKS = {
         description : "Have you heard about the tremendous success Amazon and Netflix have had by switching to a microservice architecture? Are you wondering how this can benefit your company? Or are you skeptical about how it might work? If you’ve answered yes to any of these questions, this practical book will benefit you. You'll learn how to take advantage of the microservice architectural style for building systems, and learn from the experiences of others to adopt and execute this approach most successfully.",
         cover : 'url(assets/images/books/b6.jpg)',
         available : false,
-        borrowed_by : 'thanuj@librasphere.com',
+        borrowed_by : 'thanuj@gmail.com',
         overdue_fine: 15,
         eBook : false
     },
@@ -66,7 +66,7 @@ let BOOKS = {
         description : 'Easy to understand and fun to read, this updated edition of Introducing Python is ideal for beginning programmers as well as those new to the language. Author Bill Lubanovic takes you from the basics to more involved and varied topics, mixing tutorials with cookbook-style code recipes to explain concepts in Python 3. End-of-chapter exercises help you practice what you’ve learned.',
         cover : 'url(assets/images/books/b7.jpg)',
         available : false,
-        borrowed_by : 'asindu@librasphere.com',
+        borrowed_by : 'asindu@gmail.com',
         overdue_fine: 15,
         eBook : false
     },
