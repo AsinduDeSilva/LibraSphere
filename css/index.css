@@ -1,0 +1,46 @@
+*{
+    user-select: none;
+}
+
+th, td{
+    text-align: center;
+    padding: 1rem;
+    overflow-wrap: break-word;
+}
+
+table tbody {
+    display: block;
+    height: 50vh;
+    overflow-y: scroll;
+  }
+  
+table thead, table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+thead tr div {
+    transform: translateX(-0.8rem);
+}
+
+input:focus, button:focus {
+    outline: none;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+tbody::-webkit-scrollbar {
+    display: none;
+}
+
+

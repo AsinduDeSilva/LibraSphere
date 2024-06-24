@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <title>Manage Users</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+
+    <script src="./js/utils/API.js"></script>
+    <script src="./js/data/users.js"></script>
+    <script src="./js/data/books.js"></script>
+    <script src="./js/utils/app-state.js"> </script>
+    <script src="./js/utils/route-control.js"></script>
+    <script src="./js/utils/components-utils.js"></script>
+    <script src="./js/utils/user-utils.js"></script>
+
+    <link rel="stylesheet" href="./css/index.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            font-family: 'Poppins';
+        }
+    </style>
+
+
+</head>
+<body>
+    <nav id="nav-bar">
+    </nav>
+    <script src="./js/components/headers.js"></script>
+
+    <h1 class="text-4xl font-semibold py-9 text-center">Manage Users</h1>
+    
+    <div class="flex justify-center m-2">
+        <div class="flex w-[40%] items-center">
+            <i class="bg-zinc-100 h-[3rem] w-[3rem] p-2 rounded-l-lg"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="#4d4e4f" d="M5.85 17.1q1.275-.975 2.85-1.537T12 15t3.3.563t2.85 1.537q.875-1.025 1.363-2.325T20 12q0-3.325-2.337-5.663T12 4T6.337 6.338T4 12q0 1.475.488 2.775T5.85 17.1M12 13q-1.475 0-2.488-1.012T8.5 9.5t1.013-2.488T12 6t2.488 1.013T15.5 9.5t-1.012 2.488T12 13m0 9q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q1.325 0 2.5-.387t2.15-1.113q-.975-.725-2.15-1.112T12 17t-2.5.388T7.35 18.5q.975.725 2.15 1.113T12 20m0-9q.65 0 1.075-.425T13.5 9.5t-.425-1.075T12 8t-1.075.425T10.5 9.5t.425 1.075T12 11m0 7.5"/></svg>
+            </i>
+            <input autocomplete="off" placeholder="search user" spellcheck="false" class="bg-zinc-100 w-[100%] focus:outline-none h-[3rem] rounded-r-lg caret-[#4d4e4f] text-[#4d4e4f] pr-[2rem]" type="text" name="q" id="q" onkeyup="show_users()"> 
+        </div>
+    </div>
+
+    <div class="flex justify-center my-[3rem]">
+        <table id="results" class="w-[80%] h-[100%] rounded-xl text-[#4d4e4f] bg-white outline outline-[1rem] outline-white">
+        </table>
+    </div>
+    <script src="./js/components/users-search-view.js"></script>
+</body>
+</html>

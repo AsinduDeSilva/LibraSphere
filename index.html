@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <title>LibraSphere</title>
+    
+    <script src="js/utils/API.js"></script>
+    <script src="js/data/users.js"></script>
+    <script src="js/utils/app-state.js"></script>
+    <script src="js/data/books.js"></script>
+    <script src="js/utils/route-control.js"></script>
+    <script src="js/utils/components-utils.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            scroll-behavior: smooth;
+            font-family: 'Poppins';
+        }
+    </style>
+
+
+</head>
+<body>
+    <nav id="nav-bar" class="sticky top-0 z-10"></nav>
+    <script src="js/components/headers.js"></script>
+
+    <section class="h-[91vh] bg-center bg-no-repeat bg-cover bg-[url('https://miro.medium.com/v2/resize:fit:1100/format:webp/1*6Jp3vJWe7VFlFHZ9WhSJng.jpeg')] bg-gray-700 bg-blend-multiply">
+        <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+            <h1 class="mb-4 text-4xl font-bold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Discover a World of Information at <br>LibraSphere</h1>
+            <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">where knowledge meets community. Dive into our extensive collection of books, digital media, and research tools. Join our events and programs for all ages, and let us support your journey of lifelong learning and discovery</p>
+            <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+                <a href="collection.html" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-[#0a4d76] border border-[#0A4C76] hover:bg-[#274e68] focus:ring-4 focus:ring-blue-300">
+                    View Collection
+                    <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </a>
+                <a href="#footer" class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+                    Contact us
+                </a>  
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="flex m-10 py-10">
+        <div class="flex-[3] h-[400px] bg-gray-200 rounded-l-xl shadow-xl flex justify-center bg-cover bg-center bg-no-repeat bg-[url(https://images.pexels.com/photos/1907785/pexels-photo-1907785.jpeg)]">
+        </div>
+        <div class="flex-[5] border bg-gray-200 shadow-xl rounded-r-xl">
+            <h1 class="text-4xl font-bold mt-24 mb-10 text-center">About Us</h1>
+            <p class="mx-20 text-justify text-md text-gray-700">
+                Welcome to LibraSphere, your local hub for knowledge and community engagement. Since 2010, we have been dedicated to providing access to a diverse collection of books, digital resources, and educational programs for all ages. Our mission is to inspire lifelong learning and foster a love of reading within our community. Visit us to explore, learn, and connect in a welcoming and inclusive environment.
+            </p>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <footer id="footer"></footer>
+    <script src="js/components/footer.js"></script>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>

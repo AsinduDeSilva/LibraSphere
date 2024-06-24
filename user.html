@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+
+    <script src="./js/utils/API.js"></script>
+    <script src="./js/data/users.js"></script>
+    <script src="./js/data/books.js"></script>
+    <script src="./js/utils/app-state.js"> </script>
+    <script src="./js/utils/route-control.js"></script>
+    <script src="./js/utils/components-utils.js"></script>
+    <script src="./js/utils/user-utils.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function display_borrowed_books(){
+            $('#borrowed-books-button').css('border-bottom', 'solid 3px #212121')
+            $('#borrowed-books-button').css('font-weight', '600')
+        
+            $('#add-book-button').css('border-bottom', 'none')
+            $('#add-book-button').css('font-weight', '400')
+
+            $('#borrowed-search').show()
+            $('#borrowed-books-container').show()
+
+            $('#add-book-search-field').hide()
+            $('#add-borrow-book').css('display', 'none')
+            $('#book-query').hide()
+            $('#books-container').css('display', 'flex')
+            
+        }
+
+        function display_add_book(){
+            $('#borrowed-books-button').css('border-bottom', 'none')
+            $('#borrowed-books-button').css('font-weight', '400')
+
+            $('#add-book-button').css('border-bottom', 'solid 3px #212121')
+            $('#add-book-button').css('font-weight', '600')
+
+            
+
+            $('#borrowed-search').hide()
+            $('#borrowed-books-container').css('display', 'none')
+
+            $('#add-book-search-field').show()
+            $('#add-borrow-book').css('display', 'flex')
+            $('#book-query').show()
+            $('#books-container').hide()
+            
+        }
+    </script>
+
+</head>
+<body class="h-[180vh]">
+    <nav id="nav-bar">
+    </nav>
+    <script src="./js/components/headers.js"></script>
+
+    <script>
+
+    </script>
+
+    <div id="user-info-container">
+    </div>
+    <script src="./js/components/user-info-container.js"></script>
+
+    <div class="pl-[15%]">
+        <button id="borrowed-books-button" class="p-1 w-[10rem]" onclick="display_borrowed_books()">Borrowed Books</button>
+        <button id="add-book-button" class="p-1 w-[10rem]" onclick="display_add_book()">Add Book</button>
+    </div>
+
+
+    <script>
+        const items_per_page = 2
+        let user_borrowed_books = user.borrowed
+        let display_user_borrowed_books = user.borrowed
+        const admin_view = true
+    </script>
+
+    <div class="flex justify-center w-[100%]">
+        <div class="mx-[5rem] my-[2rem] w-[80%]" id='borrowed-search'>
+        </div>
+    </div>
+    <script src="./js/components/borrowed-book-search-engine.js"></script>
+
+    <div class="w-[100%] flex justify-center">
+        <div class="flex w-[60%] items-center pt-[2rem] translate-y-[0.3rem]" id="add-book-search-field">
+            <i class="bg-zinc-100 w-[20%] h-[3rem] w-[3rem] p-2 rounded-l-lg"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M9.5 16q-2.725 0-4.612-1.888T3 9.5t1.888-4.612T9.5 3t4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l5.6 5.6q.275.275.275.7t-.275.7t-.7.275t-.7-.275l-5.6-5.6q-.75.6-1.725.95T9.5 16m0-2q1.875 0 3.188-1.312T14 9.5t-1.312-3.187T9.5 5T6.313 6.313T5 9.5t1.313 3.188T9.5 14"/></svg></i>
+            <input type="text" placeholder="Search Available Book" id="book-query" onkeyup="book_search(event)" autocomplete="off" spellcheck="false" class="bg-zinc-100 w-[100%] focus:outline-none h-[3rem] rounded-r-lg caret-[#4d4e4f] text-[#4d4e4f] pr-[2rem]"> 
+        </div>
+    </div>
+
+    <div id="books-container" class="flex justify-center h-[80vh]">
+        <table id="borrowed-books-container" class="w-[80%] h-[100%] rounded-xl text-[#4d4e4f]">
+        </table>
+        <script src="./js/components/profile-borrowed-books-container.js"></script>
+    </div>
+    
+
+    <div id="add-borrow-book-search" class="flex w-[100%]">
+    </div>
+
+    <div id="add-borrow-book" class="flex flex-col w-[100%] justify-center items-center">
+        <div class="h-[60vh] w-[10%] flex justify-center items-center text-[#e7e9eb]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="m479.6 399.716l-81.084-81.084l-62.368-25.767A175.014 175.014 0 0 0 368 192c0-97.047-78.953-176-176-176S16 94.953 16 192s78.953 176 176 176a175.034 175.034 0 0 0 101.619-32.377l25.7 62.2l81.081 81.088a56 56 0 1 0 79.2-79.195M48 192c0-79.4 64.6-144 144-144s144 64.6 144 144s-64.6 144-144 144S48 271.4 48 192m408.971 264.284a24.028 24.028 0 0 1-33.942 0l-76.572-76.572l-23.894-57.835l57.837 23.894l76.573 76.572a24.028 24.028 0 0 1-.002 33.941"/></svg>
+        </div>
+    </div>    
+    
+
+    <script>
+        display_borrowed_books()
+    </script>
+
+
+    <script src="./js/components/add-borrow-book.js"></script>
+
+</body>
+</html>

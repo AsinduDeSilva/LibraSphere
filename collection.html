@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <title>Collection</title>
+    
+    
+    <script src="js/utils/API.js"></script>
+    <script src="js/data/books.js"></script>
+    <script src="js/utils/app-state.js"> </script>
+    <script src="js/utils/route-control.js"></script>
+    <script>
+        if(USER.role == 'guest') route('signin.html')
+    </script>
+    <script src="js/utils/components-utils.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            font-family: 'Poppins';
+        }
+    </style>
+    
+    
+</head>
+<body class="bg-white overflow-x-hidden">
+    <nav id="nav-bar" class="sticky top-0 z-10">
+    </nav>
+    <script src="js/components/headers.js"></script>
+    
+    <h1 class="text-4xl font-semibold py-9 text-center ">Collection</h1>
+
+    
+    <div class="flex items-center justify-center mx-auto mt-3" >   
+        <label for="simple-search" class="sr-only">Search</label>
+        <div class="relative w-96">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none mt-1.5">
+                <svg class="w-6 h-6 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M1 2.828c.885-.37 2.154-.769 3.388-.893c1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493c-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752c1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81c-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02c1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877c1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+                </svg>
+            </div>
+            <input type="search" id="txtSearch" class="bg-gray-50 text-gray-900 text-sm rounded-lg block w-full ps-10 p-2.5" placeholder="Search book name..." required />
+        </div>
+        
+        <button id="btn-addBook" class="p-[8.5px] ms-2 text-sm font-medium text-white bg-[#0a4d76] rounded-lg border border-[#0A4C76] hover:bg-[#0a6076]" onclick="route('add-book.html')" hidden>Add Book</button>
+
+    </div>
+
+    <br><br>
+    
+    <p class="text-center mb-36" id="noResultsFound" hidden>No results found.</p>
+    <div id="book-list" class="grid grid-cols-4 gap-12 px-14 mb-20 mt-5 w-[100vw]"></div>
+
+
+    <footer id="footer"></footer>
+    <script src="js/components/footer.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="js/components/collection-page.js"></script>
+</body>
+</html>

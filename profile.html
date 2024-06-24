@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <title>Profile</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+
+    <script src="./js/utils/API.js"></script>
+    <script src="./js/data/users.js"></script>
+    <script src="./js/data/books.js"></script>
+    <script src="./js/utils/app-state.js"> </script>
+    <script src="./js/utils/route-control.js"></script>
+    <script src="./js/utils/components-utils.js"></script>
+    <script src="./js/utils/user-utils.js"></script>
+    <script src="./js/utils/form-utils.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <nav id="nav-bar">
+    </nav>
+    <script src="./js/components/headers.js"></script>
+
+    
+    <div id="profile-container" class="w-[100%]">
+    </div>
+    <script src="./js/components/profile-container.js"></script>
+
+    <div id="bb-title" class="ml-[10rem]">
+        <button class="border-b-4 p-1 w-[10rem] font-medium border-[#212121]">Borrowed Books</button>
+    </div>
+    <script>
+        if(USER.role == 'admin') $('#bb-title').hide()
+        const items_per_page = 2
+        const user_borrowed_books = get_sub_object('users', USER.email).borrowed
+        let display_user_borrowed_books = {...user_borrowed_books}
+        const admin_view = false
+    </script>
+
+
+    <div id='borrowed-search' class="mt-[3rem]">
+    </div>
+    <script src="./js/components/borrowed-book-search-engine.js"></script>
+
+    <div id="books-container" class="flex justify-center h-[80vh] my-[3rem]">
+        <table id="borrowed-books-container" class="w-[80%] h-[100%] rounded-xl text-[#4d4e4f]">
+        </table>
+        <script src="./js/components/profile-borrowed-books-container.js"></script>
+    </div>
+
+    <script>
+        if(USER.role == 'admin'){
+            $('#borrowed-search').hide()
+            $('#books-container').hide()
+        }
+    </script>
+
+</body>
+</html>
